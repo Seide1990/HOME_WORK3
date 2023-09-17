@@ -14,19 +14,21 @@ var reqem=12;
 word_count.innerHTML=reqem;
 // klaviaturanin basilmasi hadisesi
 window.addEventListener("keyup",function(e){
+    let klv=e.key;
+     klv=klv.toLowerCase();
   var a=[];
   a=word.innerHTML.split("");
     for (let j=0;j<(select.length);j++){
-    if(e.key===select[j]){
-    a[j]=e.key;
+    if(klv===select[j]){
+    a[j]=klv;
 }
 
 }
-if(a.includes(e.key)||(sehv_herf.includes(e.key))){
+if(a.includes(klv)||(sehv_herf.includes(klv))){
 
 }
 else{
-    sehv_herf.push(e.key);
+    sehv_herf.push(klv);
    f_words.innerHTML=sehv_herf;
 }
 word.innerHTML=a.join("");
